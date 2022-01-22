@@ -6,6 +6,7 @@ const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 let initialState = {
   weather: [],
   isFetching: false,  
+  followingInProgress: false,
 }
 
 const weatherReducer = (state = initialState, action) => {
@@ -44,5 +45,6 @@ export const getWeather = (location) => ({type: GET_WEATHER, location})
 export const updateNewTextSearch = (newText) => ({type: UPDATE_NEW_TEXT_SEARCH, newText})
 export const setWeather = (weather) => ({type: SET_WEATHER, weather})
 export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching})
+
 
 export default weatherReducer

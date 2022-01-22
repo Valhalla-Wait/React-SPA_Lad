@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setWeather, toggleIsFetching, updateNewTextSearch } from "../../redux/weather-reducer";
+import { setWeather, toggleIsFetching, updateNewTextSearch, toggleFollowingInProgress} from "../../redux/weather-reducer";
 import Main from "./Main";
 
 let mapStateToProps = (state) => {
