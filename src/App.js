@@ -2,7 +2,6 @@ import './App.css';
 import Header from './components/Header/Header';
 import {BrowserRouter, Route} from 'react-router-dom'
 import React from 'react';
-import * as axios from 'axios'
 import MainConteiner from './components/Main/MainConteiner';
 
 // let App = () => {

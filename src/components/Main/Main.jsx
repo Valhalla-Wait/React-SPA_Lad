@@ -4,17 +4,21 @@ import Preloader from '../../common/Preloader/Preloader'
 const Main = (props) => {
   let newTextSearch = React.createRef()
   let search = () => {
+    let data = newTextSearch.current.value
 
-  //ЗАПРОС БЕЗ API
-  //   let data = newTextSearch.current.value
-  //   props.setWeather([
-  //     {location: data, description: 'Облачно', temp: -20, img: 'none'},
-  // ])
+
+
+  //ЗАПРОС БЕЗ API 
+    props.setWeather([
+      {location: data, description: 'Облачно', temp: -20, img: 'none'},
+  ])
 
 
 //ЗАПРОС API
-    let data = newTextSearch.current.value
-    props.getWeatherThunkCreator(data)
+    // props.getWeatherThunkCreator(data)
+
+
+
   }
   
   
