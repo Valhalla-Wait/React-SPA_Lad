@@ -1,6 +1,4 @@
-import * as axios from 'axios'
 import React from 'react'
-import getWeather, { weatherAPI } from '../../api/api'
 import Preloader from '../../common/Preloader/Preloader'
 
 const Main = (props) => {
@@ -16,18 +14,7 @@ const Main = (props) => {
 
 //ЗАПРОС API
     let data = newTextSearch.current.value
-    props.toggleIsFetching(true)
-      weatherAPI.getWeather(data).then(data => {
-            props.setWeather([
-              {location: data.location.name, description: data.current.condition.text, temp: data.current.temp_c, img: 'none'},
-          ])
-          props.toggleIsFetching(false)
-          }).catch(function (error) {
-            console.error(error);
-          });
-
-
-
+    props.getWeatherThunkCreator(data)
   }
   
   

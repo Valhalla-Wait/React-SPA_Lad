@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setWeather, toggleIsFetching, updateNewTextSearch, toggleFollowingInProgress} from "../../redux/weather-reducer";
+import { setWeather, toggleIsFetching, updateNewTextSearch, getWeatherThunkCreator} from "../../redux/weather-reducer";
 import Main from "./Main";
 
 let mapStateToProps = (state) => {
@@ -26,4 +26,4 @@ let mapStateToProps = (state) => {
 //   }
 // }
 
-export default connect(mapStateToProps, {updateNewTextSearch, setWeather, toggleIsFetching})(Main)
+export default connect(mapStateToProps, {updateNewTextSearch, setWeather, toggleIsFetching, getWeatherThunkCreator})(Main)
