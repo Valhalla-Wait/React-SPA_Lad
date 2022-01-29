@@ -1,39 +1,42 @@
 import React from 'react'
 import Preloader from '../../common/Preloader/Preloader'
+import { useFormik } from 'formik'
 
 const Main = (props) => {
-  let newTextSearch = React.createRef()
-  let search = () => {
-    let data = newTextSearch.current.value
-
-
-
-  //ЗАПРОС БЕЗ API 
-    props.setWeather([
-      {location: data, description: 'Облачно', temp: -20, img: 'none'},
-  ])
-
-
-//ЗАПРОС API
-    // props.getWeatherThunkCreator(data)
-
-
-
+  const getWeather = (data) => {
+    props.getWeatherThunkCreator(data)
   }
-  
+  const formik = useFormik({
+    initialValues: {
+      searchText: '',
+    },
+    onSubmit: (values) => {
+      getWeather(values)
+    }
+  })
   
   return(
     <div className="weather_panel">
       {props.isFetching ? <Preloader /> : null}
-      <input type="text" ref={newTextSearch} />
-      <button onClick={search}>Прогноз</button>
-      {props.weather.map( w => <div>
-        {w.location},  {w.description},{w.temp} 
-      </div>)}
-      {/* <div className="location">{props.weather.location}</div>
-      <div className="desc">{props.weather.description}</div>
-      <div className="temp">{props.weather.temp}</div>
-      <div className="img">{props.weather.img}</div> */}
+      <form onSubmit={formik.handleSubmit}>
+        <input
+          id='searchText'
+          name='searchText' 
+          type="text" 
+          placeholder='Введите город'
+          onChange={formik.handleChange}
+          value={formik.values.searchText}
+          />
+          <button type='submit'>Прогноз</button>
+      </form>
+
+      <div className="weather_result">
+        {props.weather.map( w => 
+          <div>
+            {w.location},  {w.description},{w.temp} 
+          </div>
+        )}
+      </div>
     </div>
   )
 }

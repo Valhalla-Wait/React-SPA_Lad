@@ -22,12 +22,10 @@ import * as axios from 'axios'
   //   }).catch(function (error) {
   //     console.error(error);
   //   });
-    let a = 233
     return (
       <header>
         <div className="logo">ЛОГОТИП</div>
-        <Nav></Nav><br />
-        Погода в {a}: градуса
+        <Nav></Nav>
       </header>
     )
   
