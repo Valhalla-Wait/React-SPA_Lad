@@ -14,6 +14,19 @@ const Main = (props) => {
       getWeather(values)
     }
   })
+  const getForecast = (forecast) => {
+    if(!forecast){
+      return
+    }
+    for (let i = 0; i < forecast.length; i++) {
+      let hour = forecast[i].time
+      hour = hour.match(/\d\d:\d\d/).toString()
+      forecast[i].time = hour
+    }
+    return forecast.map(h => 
+      <div key={h.time}>{h.time} | {h.temp_c}</div>
+    )
+  }
   
   return(
     <div className="weather_panel">
@@ -31,11 +44,14 @@ const Main = (props) => {
       </form>
 
       <div className="weather_result">
-        {props.weather.map( w => 
-          <div>
-            {w.location},  {w.description},{w.temp} 
-          </div>
-        )}
+
+      {props.weather.location}, {props.weather.description}, {props.weather.temp}, <img src={props.weather.img} alt="weather_icon" />
+      {console.log(props.weather.forecast)}
+      {getForecast(props.weather.forecast)}
+
+      {/* {props.weather.forecast.map(h => 
+          <div key={h.time.toString()}>{h.time}, {h.temp_c}</div>
+        )} */}
       </div>
     </div>
   )

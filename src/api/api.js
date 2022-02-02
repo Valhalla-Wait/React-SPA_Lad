@@ -4,13 +4,13 @@ export const weatherAPI = {
     getWeather(data) {
         //instance query
         const instance = axios.create({
-            baseURL: 'http://api.weatherapi.com/',
+            baseURL: 'http://api.weatherapi.com/v1/',
             params: {q: data, lang: 'ru'},
             headers: {
               'key': '1055aa5b43174f4981c171459221601'
             }
         })
-        return instance.get('v1/current.json').then(response => {
+        return instance.get('forecast.json').then(response => {
             return response.data
         })
     

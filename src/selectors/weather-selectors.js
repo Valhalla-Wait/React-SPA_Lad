@@ -7,7 +7,3 @@ export const getWeather = (state) => {
 export const getFetching = (state) => {
   return state.weatherPage.isFetching
 }
-
-export const getNewTextSearch = (state) => {
-  return state.weatherPage.newTextSearch
-}
