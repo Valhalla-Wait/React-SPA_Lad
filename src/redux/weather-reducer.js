@@ -32,9 +32,8 @@ export const getWeatherThunkCreator = (location) => {
     dispatch(toggleIsFetching(true))
     weatherAPI.getWeatherOnIP(location).then(data => {
       weatherAPI.getWeather(data.city).then(data => {
-        console.log(data)
         dispatch(setWeather(
-          {location: data.location.name, description: data.current.condition.text, temp: data.current.temp_c, img: data.current.condition.icon, feelslike: data.current.feelslike_c, humidity: data.current.humidity, wind_speed: data.current.wind_mph, forecast: data.forecast.forecastday[0].hour},
+          {location: data.location.name, description: data.current.condition.text, temp: data.current.temp_c, img: data.current.condition.icon, feelslike: data.current.feelslike_c, humidity: data.current.humidity, wind_speed: data.current.wind_kph, forecast: data.forecast.forecastday[0].hour},
         ))
         dispatch(toggleIsFetching(false))
       })

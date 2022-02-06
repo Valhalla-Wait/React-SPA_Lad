@@ -1,0 +1,29 @@
+.slider__conteiner {
+  height: 150px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  user-select: none;
+}
+
+.slider__window {
+  height: 100%;
+  width: 600px;
+  overflow: hidden;
+  grid-column: 2/3;
+}
+
+.slider__items_conteiner {
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 30px;
+  transition: 1s;
+
+}
+
+.slider__arrow {
+  cursor: pointer;
+}
