@@ -1,5 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+}
+
+body {
+  background-image: url('1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .App {
   text-align: center;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+  grid-template-areas: 
+  'header'
+  'main'
+  'footer'
+  ;
 }
 
 .App-logo {

@@ -1,0 +1,12 @@
+header {
+  grid-area: header;
+  display: grid;
+  /* ! */
+  grid-template: 1fr / 1fr minmax(auto, 450px) minmax(auto, 550px) 1fr;
+  padding: 15px;
+  align-items: center;
+}
+.header__logo {
+  grid-column: 2 / 3;
+}
+

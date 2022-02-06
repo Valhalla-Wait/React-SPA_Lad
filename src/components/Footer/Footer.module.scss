@@ -1,0 +1,8 @@
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template: 1fr / 1fr minmax(auto, 450px) minmax(auto, 550px) 1fr;
+}
+.footer__copy{
+  grid-column: 2/3;
+}

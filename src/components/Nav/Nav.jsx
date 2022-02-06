@@ -4,13 +4,13 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div>
-      <ul className={style.menu}>
-        <li><NavLink to='/weather'>Main</NavLink></li>
-        <li><NavLink to='/about'>About</NavLink></li>
-      </ul>
-
-    </div>
+    <nav className={style.header__menu}>
+        <ul className={style.header__list}>
+          <li><a className={style.header__link} href="#">Ваш город</a></li>
+          <li><a className={style.header__link} href="#">Погода в городах</a></li>
+          <li><a className={style.header__link} href="#">О приложении</a></li>
+        </ul>
+    </nav>
   )
 }
 

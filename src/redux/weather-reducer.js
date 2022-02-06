@@ -30,11 +30,14 @@ export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFe
 export const getWeatherThunkCreator = (location) => {
   return (dispatch) => {
     dispatch(toggleIsFetching(true))
-    weatherAPI.getWeather(location).then(data => {
+    weatherAPI.getWeatherOnIP(location).then(data => {
+      weatherAPI.getWeather(data.city).then(data => {
+        console.log(data)
         dispatch(setWeather(
-          {location: data.location.name, description: data.current.condition.text, temp: data.current.temp_c, img: data.current.condition.icon, forecast: data.forecast.forecastday[0].hour},
+          {location: data.location.name, description: data.current.condition.text, temp: data.current.temp_c, img: data.current.condition.icon, feelslike: data.current.feelslike_c, humidity: data.current.humidity, wind_speed: data.current.wind_mph, forecast: data.forecast.forecastday[0].hour},
         ))
-      dispatch(toggleIsFetching(false))
+        dispatch(toggleIsFetching(false))
+      })
       }).catch(function (error) {
         console.error(error);
       });

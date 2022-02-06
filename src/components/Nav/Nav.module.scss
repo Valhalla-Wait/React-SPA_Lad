@@ -1,9 +1,20 @@
-.menu {
-  display: inline;
-  list-style-type: none;
-  /* float: left; */
+.header__menu {
+  grid-column: 3 / 4;
 }
-li {
-  float: left;
-  margin: 10px;
+
+.header__list {
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  grid-gap: 10px;
+  justify-items: end;
+}
+
+.header__link {
+ text-decoration: none;
+ font-size: 20px;
+ &:hover {
+  transition: 0.2s;
+  opacity: 0.6;
+ }
 }
