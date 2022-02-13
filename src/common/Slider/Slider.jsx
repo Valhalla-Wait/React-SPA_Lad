@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Carousel = ({children}) => {
 
-  const ITEM_WIDTH = 530
+  const ITEM_WIDTH = 600
 
   const [offset, setOffset] = useState(0)
 
@@ -18,7 +18,7 @@ const Carousel = ({children}) => {
   const handleRightArrowClick = () => {
     setOffset((currentOffset) => {
       const newOffset = currentOffset - ITEM_WIDTH
-      return Math.max(newOffset, -1500)
+      return Math.max(newOffset, -1800)
 
     })
   }

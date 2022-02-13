@@ -3,21 +3,27 @@ main {
   display: grid;
   /* ! */
   grid-template-columns: 1fr 2fr 1fr;
-  justify-items: center;
   margin-top: 100px;
+  justify-items: center;
 }
 
 .content{
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 1fr 10fr;
   grid-column: 2 / 3;
+  width: 100%;
 }
 
 .preloader {
-  grid-column: 2 / 3;
+  grid-column: 2/3;
+  justify-self: center;
 }
 
 .user_location{
   font-size: 25px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .weather_panel{
@@ -29,6 +35,45 @@ main {
   grid-gap: 30px;
 }
 
+.weather_panel__form {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  >form{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 90% 10%;
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    >input {
+      background-color:rgba(0, 0, 0, 0.28);
+      border: none;
+      height: 40px;
+      border-top-left-radius: 10px;
+      border-end-start-radius: 10px;
+      font-size: 15px;
+    }
+    >input:hover {
+      transition: 0.3s;
+      background-color:rgba(0, 0, 0, 0.50);
+    }
+    input:-internal-autofill-selected {
+      background-color: -internal-light-dark(rgba(0, 0, 0, 0.50), rgba(70, 90, 126, 0.4)) !important;
+  }
+    >button {
+      background-color:  rgba(0, 0, 0, 0.28);
+      border-top-right-radius: 10px;
+      border-end-end-radius: 10px;
+      border: none;
+      
+    }
+    >button:hover {
+      transition: 0.3s;
+      background-color: rgba(0, 0, 0, 0.50);
+    }
+  }
+}
 
 .weather_panel__result{
   display: grid;

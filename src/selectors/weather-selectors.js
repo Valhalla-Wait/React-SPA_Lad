@@ -7,3 +7,7 @@ export const getWeather = (state) => {
 export const getFetching = (state) => {
   return state.weatherPage.isFetching
 }
+
+export const getSelfCity = (state) => {
+  return state.weatherPage.selfCity
+}

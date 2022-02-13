@@ -1,5 +1,5 @@
 import React from "react";
-import preloader from './../../assets/preloaders/shestir.gif'
+import preloader from './loading.gif'
 let Preloader = () => {
   return (
     <div>

@@ -1,28 +1,22 @@
 import React from 'react'
 import Preloader from '../../common/Preloader/Preloader'
-import { useFormik } from 'formik'
 import style from './Main.module.scss'
 import Carousel from '../../common/Slider/Slider'
+import { useEffect } from 'react'
+import Panel from '../../common/Panel/Panel'
 
 const Main = (props) => {
   
-  const getWeather = (data) => {
-    props.getWeatherThunkCreator(data)
+  const getWeather = () => {
+    props.getSelfWeatherThunkCreator()
   }
+  useEffect(() => {
+    
+     if(props.selfCity == '') {
+      getWeather()
+     }
+  }, [props.selfCity])
 
-  if(Object.keys(props.weather).length == 0) {
-    getWeather()
-  }
-
-  const formik = useFormik({
-    initialValues: {
-      searchText: '',
-    },
-    onSubmit: (values) => {
-      getWeather(values)
-    }
-  })
-  
   const getForecast = (forecast) => {
     if(!forecast){
       return
@@ -43,29 +37,15 @@ const Main = (props) => {
   
   return(
     <main className={style.main}>
-    {props.isFetching ? <Preloader /> : null}
+    {props.isFetching ? <div className={style.preloader}><Preloader /></div> : 
     <section className={style.content}>
-      <div className={style.user_location}>Ваш город: {props.weather.location}</div>
-      <div className={style.conteiner}>
-        <div className={style.weather_panel}>
-          <div className={style.weather_panel__result}>
-            <div className={style.weather_panel__weather}>
-              <div className={style.weather_panel__temp}>{props.weather.temp}</div>
-              <div className={style.weather_panel__img}><img src={props.weather.img} alt="weather_icon"/></div>
-              <div className={style.weather_panel__desc}>{props.weather.description}</div>
-            </div>
-            <div className={style.weather_panel__detailed}>
-              <div className={style.weather_panel__spedd}>Скорость ветра: {props.weather.wind_speed} км/ч</div>
-              <div className={style.weather_panel__water}>Влажность: {props.weather.humidity}%</div>
-              <div className={style.weather_panel__compas}>Ощущается как: {props.weather.feelslike}</div>
-            </div>
-          </div>
-          <Carousel>
-            {getForecast(props.weather.forecast)}
-          </Carousel>
-      </div>
-      </div>
-    </section>
+    <div className={style.user_location}>Ваш город: {props.weather.location}</div>
+    <div className={style.conteiner}>
+      <Panel weather={props.weather}/>
+    </div>
+  </section>
+  }
+    
   </main>
 
     

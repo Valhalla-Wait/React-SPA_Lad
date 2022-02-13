@@ -13,21 +13,8 @@ export const weatherAPI = {
         return instance.get('forecast.json').then(response => {
             return response.data
         })
-    
-        //default query (old)
-        // const options = {
-        //     method: 'GET',
-        //     url: 'http://api.weatherapi.com/v1/current.json',
-        //     params: {q: data, lang: 'ru'},
-        //     headers: {
-        //       'key': '1055aa5b43174f4981c171459221601'
-        //     }
-        //   }
-        // return axios.request(options).then(response => {
-        //     return response.data
-        // })
     },
-    getWeatherOnIP(data) {
+    getWeatherOnIP() {
         //instance query
         const instance = axios.create({
             baseURL: 'http://api.weatherapi.com/v1/',
@@ -39,19 +26,6 @@ export const weatherAPI = {
         return instance.get('ip.json').then(response => {
             return response.data
         })
-    
-        //default query (old)
-        // const options = {
-        //     method: 'GET',
-        //     url: 'http://api.weatherapi.com/v1/current.json',
-        //     params: {q: data, lang: 'ru'},
-        //     headers: {
-        //       'key': '1055aa5b43174f4981c171459221601'
-        //     }
-        //   }
-        // return axios.request(options).then(response => {
-        //     return response.data
-        // })
     },
 }  
 
