@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setWeather, toggleIsFetching, getSelfWeatherThunkCreator, getWeatherThunkCreator} from "../../redux/weather-reducer";
+import { setWeather, toggleIsFetching, getSelfWeatherThunkCreator} from "../../redux/weather-reducer";
 import { getFetching, getSelfCity, getWeather } from "../../selectors/weather-selectors";
 import Main from "./Main";
 

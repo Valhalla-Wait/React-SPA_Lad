@@ -2,7 +2,6 @@ import * as axios from 'axios'
 
 export const weatherAPI = {
     getWeather(data) {
-        //instance query
         const instance = axios.create({
             baseURL: 'http://api.weatherapi.com/v1/',
             params: {q: data, lang: 'ru'},
@@ -12,10 +11,13 @@ export const weatherAPI = {
         })
         return instance.get('forecast.json').then(response => {
             return response.data
-        })
+        }).catch((error) => {
+            if (error.response) {
+              return error.response.data.error.code
+            }
+          });
     },
     getWeatherOnIP() {
-        //instance query
         const instance = axios.create({
             baseURL: 'http://api.weatherapi.com/v1/',
             params: {q: 'auto:ip', lang: 'ru'},

@@ -11,3 +11,7 @@ export const getFetching = (state) => {
 export const getSelfCity = (state) => {
   return state.weatherPage.selfCity
 }
+
+export const getError = (state) => {
+  return state.weatherPage.error
+}

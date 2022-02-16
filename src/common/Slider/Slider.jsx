@@ -27,7 +27,7 @@ const Carousel = ({children}) => {
 
   return (
     <div className={style.slider__conteiner}>
-      <FiChevronLeft className={style.slider__arrow} onClick={handleLeftArrowClick}/>
+      <FiChevronLeft className={style.slider__arrow} onClick={handleLeftArrowClick} size={30}/>
       <div className={style.slider__window}>
         <div className={style.slider__items_conteiner}
           style={{
@@ -37,7 +37,7 @@ const Carousel = ({children}) => {
           {children}
         </div>
       </div>
-      <FiChevronRight  className={style.slider__arrow} onClick={handleRightArrowClick}/>
+      <FiChevronRight  className={style.slider__arrow} onClick={handleRightArrowClick} size={30}/>
     </div>
   )
 }

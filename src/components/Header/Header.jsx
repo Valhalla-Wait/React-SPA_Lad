@@ -11,7 +11,7 @@ import style from "./Header.module.scss"
           <span>Monitoring</span>
         </h1>
       </div>
-        <Nav></Nav>
+        <Nav />
       </header>
     )
   

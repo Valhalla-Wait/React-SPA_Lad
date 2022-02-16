@@ -1,8 +1,14 @@
 footer {
+  font-size: 18px;
   grid-area: footer;
   display: grid;
   grid-template: 1fr / 1fr minmax(auto, 450px) minmax(auto, 550px) 1fr;
+  >.footer__title{
+    grid-column: 2/3;
+  }
+  >.footer__desc{
+    grid-column: 3/4;
+    justify-self: end;
+  }
 }
-.footer__copy{
-  grid-column: 2/3;
-}
+

@@ -5,17 +5,22 @@ import React from 'react';
 import MainConteiner from './components/Main/MainConteiner';
 import Footer from './components/Footer/Footer';
 import SearchWeatherConteiner from './components/SearchWeather/SearchWeatherConteiner';
+import About from './components/About/About';
 
  let App = (props) => {
     return (
       <BrowserRouter>
-        <div className="wrapper">
+        <div className='wrapper'>
           <Header/>
-          {/* <MainConteiner state={props.state}/> */}
-            <Routes>
-              <Route path='/self' element={<MainConteiner state={props.state}/>}/>
-              <Route path='/search' element={<SearchWeatherConteiner />}/>
-            </Routes>
+          <main className='main'>
+            <div className="content">
+              <Routes>
+                <Route path='/' element={<MainConteiner state={props.state}/>}/>
+                <Route path='/search' element={<SearchWeatherConteiner />}/>
+                <Route path='/about' element={<About />}/>
+              </Routes>
+            </div>
+          </main>
           <Footer/>
         </div>
       </BrowserRouter>
