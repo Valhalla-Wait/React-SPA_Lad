@@ -16,13 +16,13 @@ const About = React.lazy(() => import('./components/About/About'));
           <main className='main'>
             <div className="content">
               <Routes>
-                <Route path='/' element={<MainConteiner/>}/>
-                <Route path='/search' element={
+                <Route exact path='/' element={<MainConteiner/>}/>
+                <Route exact path='/search' element={
                   <Suspense fallback={<Preloader />}>
                     <SearchWeatherConteiner />
                   </Suspense>
                 }/>
-                <Route path='/about' element={
+                <Route exact path='/about' element={
                   <Suspense fallback={<Preloader />}>
                     <About />
                   </Suspense>

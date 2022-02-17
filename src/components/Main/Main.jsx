@@ -19,7 +19,7 @@ const Main = (props) => {
   return(
     <div>
       {props.isFetching ? 
-        <div className={style.preloader}><Preloader /></div> : Object.keys(props.weather).length == 0? null :
+        <div className={style.preloader}><Preloader /></div> : Object.keys(props.weather).length == 0 || !props.selfCity ? null :
           <section className={style.content}>
           <div className={style.conteiner}>
             <Panel weather={props.weather}/>
