@@ -9,7 +9,7 @@ const Nav = () => {
 
           <li><NavLink to='/' className={style.header__link} href="#">Ваш город</NavLink></li>
           <li><NavLink  to='/search' className={style.header__link} href="#">Погода в городах</NavLink></li>
-          <li><NavLink  to='/about' className={style.header__link} href="#">О приложении</NavLink></li>
+          <li><NavLink  to='/about' className={style.header__link} href="#">О проекте</NavLink></li>
         </ul>
     </nav>
   )
