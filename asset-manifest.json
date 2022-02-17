@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-SPA_Lad/static/css/main.32bb893b.css",
-    "main.js": "/React-SPA_Lad/static/js/main.eeb20e2f.js",
+    "main.js": "/React-SPA_Lad/static/js/main.9c948d9e.js",
     "static/css/172.c87c9e45.chunk.css": "/React-SPA_Lad/static/css/172.c87c9e45.chunk.css",
     "static/js/172.9849f831.chunk.js": "/React-SPA_Lad/static/js/172.9849f831.chunk.js",
     "static/css/499.b5b62887.chunk.css": "/React-SPA_Lad/static/css/499.b5b62887.chunk.css",
@@ -11,7 +11,7 @@
     "static/media/2.jpg": "/React-SPA_Lad/static/media/2.2b918fe078b0ded08aa1.jpg",
     "index.html": "/React-SPA_Lad/index.html",
     "main.32bb893b.css.map": "/React-SPA_Lad/static/css/main.32bb893b.css.map",
-    "main.eeb20e2f.js.map": "/React-SPA_Lad/static/js/main.eeb20e2f.js.map",
+    "main.9c948d9e.js.map": "/React-SPA_Lad/static/js/main.9c948d9e.js.map",
     "172.c87c9e45.chunk.css.map": "/React-SPA_Lad/static/css/172.c87c9e45.chunk.css.map",
     "172.9849f831.chunk.js.map": "/React-SPA_Lad/static/js/172.9849f831.chunk.js.map",
     "499.b5b62887.chunk.css.map": "/React-SPA_Lad/static/css/499.b5b62887.chunk.css.map",
@@ -21,6 +21,6 @@
   },
   "entrypoints": [
     "static/css/main.32bb893b.css",
-    "static/js/main.eeb20e2f.js"
+    "static/js/main.9c948d9e.js"
   ]
 }
