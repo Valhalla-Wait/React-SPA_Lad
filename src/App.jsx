@@ -10,7 +10,7 @@ const About = React.lazy(() => import('./components/About/About'));
 
  let App = (props) => {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div className='wrapper'>
           <Header/>
           <main className='main'>
