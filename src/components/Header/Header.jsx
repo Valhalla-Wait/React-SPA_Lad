@@ -7,7 +7,7 @@ import style from "./Header.module.scss"
       <header className={style.header}>
         <div className={style.header__logo}>
         <h1>
-          Weather<br/>
+          WeatherRRRRRRRRR<br/>
           <span>Monitoring</span>
         </h1>
       </div>
