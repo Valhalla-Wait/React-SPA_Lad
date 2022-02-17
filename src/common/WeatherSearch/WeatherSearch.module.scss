@@ -1,12 +1,7 @@
-.user_location{
-  font-size: 25px;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
 .weather_panel__form {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  margin-bottom: 20px;
   >form{
     display: grid;
     grid-auto-flow: column;
@@ -17,11 +12,12 @@
     width: 100%;
     >input {
       background-color:rgba(0, 0, 0, 0.28);
+      padding-left: 15px;
       border: none;
       height: 40px;
       border-top-left-radius: 10px;
       border-end-start-radius: 10px;
-      font-size: 15px;
+      font-size: 18px;
       &:hover {
         transition: 0.3s;
         background-color:rgba(0, 0, 0, 0.50);

@@ -15,6 +15,7 @@ const About = (props) => {
           <li>Модульные стили или styled-components</li>
           <li>роутинг React-router-dom</li>
           <li>Redux. Асинхронные экшены Redux-thunk</li>
+          <li>React.lazy, React.Suspense</li>
           <li>Formik</li>
           <li>Sass</li>
           <li>Axios</li>

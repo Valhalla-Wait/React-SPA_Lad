@@ -1,11 +1,12 @@
 import './App.css';
 import Header from './components/Header/Header';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import React from 'react';
+import React, { Suspense } from 'react';
 import MainConteiner from './components/Main/MainConteiner';
 import Footer from './components/Footer/Footer';
-import SearchWeatherConteiner from './components/SearchWeather/SearchWeatherConteiner';
-import About from './components/About/About';
+import Preloader from './common/Preloader/Preloader';
+const SearchWeatherConteiner = React.lazy(() => import('./components/SearchWeather/SearchWeatherConteiner'));
+const About = React.lazy(() => import('./components/About/About'));
 
  let App = (props) => {
     return (
@@ -15,9 +16,17 @@ import About from './components/About/About';
           <main className='main'>
             <div className="content">
               <Routes>
-                <Route path='/' element={<MainConteiner state={props.state}/>}/>
-                <Route path='/search' element={<SearchWeatherConteiner />}/>
-                <Route path='/about' element={<About />}/>
+                <Route path='/' element={<MainConteiner/>}/>
+                <Route path='/search' element={
+                  <Suspense fallback={<Preloader />}>
+                    <SearchWeatherConteiner />
+                  </Suspense>
+                }/>
+                <Route path='/about' element={
+                  <Suspense fallback={<Preloader />}>
+                    <About />
+                  </Suspense>
+                }/>
               </Routes>
             </div>
           </main>
