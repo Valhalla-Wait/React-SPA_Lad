@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/React-SPA_Lad/static/css/main.32ba4b7c.css",
-    "main.js": "/React-SPA_Lad/static/js/main.d25ba453.js",
+    "main.css": "/React-SPA_Lad/static/css/main.08c5af0e.css",
+    "main.js": "/React-SPA_Lad/static/js/main.47078833.js",
     "static/css/172.c87c9e45.chunk.css": "/React-SPA_Lad/static/css/172.c87c9e45.chunk.css",
-    "static/js/172.642cd523.chunk.js": "/React-SPA_Lad/static/js/172.642cd523.chunk.js",
-    "static/css/499.b5b62887.chunk.css": "/React-SPA_Lad/static/css/499.b5b62887.chunk.css",
+    "static/js/172.16c9a8e7.chunk.js": "/React-SPA_Lad/static/js/172.16c9a8e7.chunk.js",
+    "static/css/499.a584a044.chunk.css": "/React-SPA_Lad/static/css/499.a584a044.chunk.css",
     "static/js/499.13285122.chunk.js": "/React-SPA_Lad/static/js/499.13285122.chunk.js",
     "static/js/787.e98ba3b7.chunk.js": "/React-SPA_Lad/static/js/787.e98ba3b7.chunk.js",
     "static/js/380.af5da510.chunk.js": "/React-SPA_Lad/static/js/380.af5da510.chunk.js",
     "static/media/2.jpg": "/React-SPA_Lad/static/media/2.2b918fe078b0ded08aa1.jpg",
     "index.html": "/React-SPA_Lad/index.html",
-    "main.32ba4b7c.css.map": "/React-SPA_Lad/static/css/main.32ba4b7c.css.map",
-    "main.d25ba453.js.map": "/React-SPA_Lad/static/js/main.d25ba453.js.map",
+    "main.08c5af0e.css.map": "/React-SPA_Lad/static/css/main.08c5af0e.css.map",
+    "main.47078833.js.map": "/React-SPA_Lad/static/js/main.47078833.js.map",
     "172.c87c9e45.chunk.css.map": "/React-SPA_Lad/static/css/172.c87c9e45.chunk.css.map",
-    "172.642cd523.chunk.js.map": "/React-SPA_Lad/static/js/172.642cd523.chunk.js.map",
-    "499.b5b62887.chunk.css.map": "/React-SPA_Lad/static/css/499.b5b62887.chunk.css.map",
+    "172.16c9a8e7.chunk.js.map": "/React-SPA_Lad/static/js/172.16c9a8e7.chunk.js.map",
+    "499.a584a044.chunk.css.map": "/React-SPA_Lad/static/css/499.a584a044.chunk.css.map",
     "499.13285122.chunk.js.map": "/React-SPA_Lad/static/js/499.13285122.chunk.js.map",
     "787.e98ba3b7.chunk.js.map": "/React-SPA_Lad/static/js/787.e98ba3b7.chunk.js.map",
     "380.af5da510.chunk.js.map": "/React-SPA_Lad/static/js/380.af5da510.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.32ba4b7c.css",
-    "static/js/main.d25ba453.js"
+    "static/css/main.08c5af0e.css",
+    "static/js/main.47078833.js"
   ]
 }
