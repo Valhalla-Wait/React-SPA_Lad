@@ -12,7 +12,7 @@ const About = (props) => {
         <ul>
           <li>React</li>
           <li>Функциональные компоненты, Hooks</li>
-          <li>Модульные стили или styled-components</li>
+          <li>Модульные стили</li>
           <li>роутинг React-router-dom</li>
           <li>Redux. Асинхронные экшены Redux-thunk</li>
           <li>React.lazy, React.Suspense</li>

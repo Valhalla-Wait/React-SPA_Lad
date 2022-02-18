@@ -33,7 +33,7 @@ const WeatherResult = (props) => {
                   <div className={style.weather_panel__detailed}>
                     <div className={style.weather_panel__spedd}>Скорость ветра: {props.weather.wind_speed} км/ч</div>
                     <div className={style.weather_panel__water}>Влажность: {props.weather.humidity}%</div>
-                    <div className={style.weather_panel__compas}>Ощущается как: {props.weather.feelslike}</div>
+                    <div className={style.weather_panel__feelslike}>Ощущается как: {props.weather.feelslike}</div>
                   </div>
                 </div>
                 <Slider>

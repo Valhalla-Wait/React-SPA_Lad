@@ -51,6 +51,11 @@
   align-content: space-evenly;
 }
 
+.weather_panel__feelslike::after {
+  content: '\00B0';
+  font-weight: 500;
+}
+
 /* FORECAST  */
 
 .weather_panel__forecast {
