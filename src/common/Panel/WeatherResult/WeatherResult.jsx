@@ -1,6 +1,6 @@
 import React from "react";
 import style from './WeatherResult.module.scss'
-import Carousel from "../Slider/Slider";
+import Slider from "./Slider/Slider";
 
 const WeatherResult = (props) => {
   const getForecast = (forecast) => {
@@ -36,9 +36,9 @@ const WeatherResult = (props) => {
                     <div className={style.weather_panel__compas}>Ощущается как: {props.weather.feelslike}</div>
                   </div>
                 </div>
-                <Carousel>
+                <Slider>
                   {getForecast(props.weather.forecast)}
-                </Carousel>
+                </Slider>
               </div>
   )
 }

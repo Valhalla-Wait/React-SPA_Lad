@@ -3,7 +3,7 @@ import style from './Slider.module.scss'
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useState } from "react";
 
-const Carousel = ({children}) => {
+const Slider = ({children}) => {
 
   const ITEM_WIDTH = 600
 
@@ -42,4 +42,4 @@ const Carousel = ({children}) => {
   )
 }
 
-export default Carousel
+export default Slider

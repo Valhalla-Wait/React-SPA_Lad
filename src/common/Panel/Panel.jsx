@@ -1,5 +1,5 @@
 import React from "react";
-import WeatherResult from "../WeatherResult/WeatherResult";
+import WeatherResult from "./WeatherResult/WeatherResult";
 import style from './Panel.module.scss'
 
 const Panel = (props) => {
